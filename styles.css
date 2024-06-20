@@ -1,0 +1,349 @@
+/* Reset some default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background: url('/bmw3.png') no-repeat;
+    background-size: cover;
+    padding: 0 20px;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Header styling */
+header {
+    background: url('/bmw2.png') no-repeat center center/cover;
+    color: #ffffff; /* Car website throughout the page */
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.header-content {
+    background-color: rgba(0, 0, 0, 0.33);
+    padding: 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+header nav ul li a:hover {
+    color: #5ac525; /* hover to change colors */ 
+}
+
+/* Main content styling */
+main {
+    padding: 20px 0;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.33);
+    border-radius: 8px;
+}
+
+section h2 {
+    margin-bottom: 10px;
+    color: #5fa50380; /* text inside the black box middle home */
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.33); /* for the bg color box in contact */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(12, 106, 48, 0.415);
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+}   
+
+form input:focus, form textarea:focus {
+    border-color: #ffffff;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #0000005e;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #085b08;
+}
+
+/* Footer styling */
+footer {
+    background: rgba(0, 0, 0, 0.33);
+    color: #fff;
+    text-align: center;
+    border: 2px groove rgba(0, 0, 0, 0.33);
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Media Queries */
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+    header {
+        padding: 40px 10px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    main {
+        padding: 10px 0;
+    }
+    body {
+        max-height: 100%;
+    }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 992px) {
+    header {
+        padding: 50px 20px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    header nav ul li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    form {
+        width: 80%;
+        padding: 20px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    main {
+        padding: 15px 0;
+    }
+    body {
+        max-height: 100%;
+    }
+}
+
+/* Laptops and Desktops */
+@media (min-width: 993px) {
+    header {
+        padding: 60px 200px;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    header nav ul li {
+        display: inline-block;
+        margin: 0 15px;
+    }
+
+    form {
+        width: 60%;
+        padding: 20px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    main {
+        padding: 20px 0;
+    }
+    body {
+        max-height: 100%;
+        height: 100%;
+    }
+}
+
+/* Dropdown menu styling */
+#menuButton {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 150px;
+        border-radius: 10px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        display: block;
+    }
+
+    #menuButton {
+        display: block;
+    }
+}
+
+/* Error styling */
+.error {
+    color: red;
+    font-size: 14px;
+    visibility: hidden;
+}
+
+/* Form validation page styling */
+#form-validation {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#messageContainer {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#messageContainer p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Menu button styles */
+nav ul.show {
+    display: block;
+}
+
+#menuButton {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    #menuButton {
+        display: block;
+    }
+}
+
+/* Form validation page styling */
+#form-validation {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#messageContainer {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#messageContainer p {
+    font-size: 18px;
+    color: #333;
+}
